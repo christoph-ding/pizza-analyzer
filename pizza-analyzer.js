@@ -28,7 +28,9 @@ pizzaAnalyzer.prototype.topTwenty = function () {
   toppingsSorted = Object.keys(orders).sort(function(a,b){return orders[b]-orders[a]});
   for (var i = 0; i < toppingsSorted.length; i++) {
     var currentTopping = toppingsSorted[i];
-    this.output.push({[currentTopping]: this.orders[currentTopping]})
+    var currentToppingObject = {};
+    currentToppingObject[currentTopping] = this.orders[currentTopping];
+    this.output.push(currentToppingObject);
   }
   return this.output;
 }
