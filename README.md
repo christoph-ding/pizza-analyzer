@@ -13,7 +13,7 @@ Given the sample of orders at http://files.olo.com/pizzas.json, write an applica
 ```
 sudo git clone https://github.com/ironpup/pizza-analyzer
 cd pizza-analyzer
-npm install
+sudo npm install
 ```
 
 ## Initialization
