@@ -1,6 +1,7 @@
 // dependency
 var request = require('request');
 
+// URL for toppings
 var toppingsURL = 'http://files.olo.com/pizzas.json';
 
 var pizzaAnalyzer = function () {
@@ -32,6 +33,7 @@ pizzaAnalyzer.prototype.topTwenty = function () {
   return this.output;
 }
 
+// Our "Main" file that runs the program
 request(toppingsURL, function (error, res, pizzaData) {
     if (!error && res.statusCode == 200) {
       var parsedPizzaData = JSON.parse(pizzaData);
